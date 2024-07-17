@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>로그인</h1>
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <div>{{ form.username.label }} {{ form.username() }}</div>  <!-- 이메일 대신 아이디 -->
+    <div>{{ form.password.label }} {{ form.password() }}</div>
+    <div>{{ form.remember() }} {{ form.remember.label }}</div>
+    <div>{{ form.submit() }}</div>
+</form>
+{% endblock %}
