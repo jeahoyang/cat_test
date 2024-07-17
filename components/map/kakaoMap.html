@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=49e009d0f8537e371396c6a7739a69d5"
+    ></script>
+    <title>KakaoMap</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kakao Map</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=49e009d0f8537e371396c6a7739a69d5"></script>
+  </head>
+  <body>
+    <div id="map" style="width:100%;height:100%;"></div>
+    <script>
+      var mapContainer = document.getElementById('map'); // 지도를 표시할 div
+      var mapOption = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3, // 지도의 확대 레벨
+      };
+
+      var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+      var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+      var marker = new kakao.maps.Marker({
+          position: markerPosition
+      });
+
+      marker.setMap(map);
+    </script>
+  </body>
+</html>
